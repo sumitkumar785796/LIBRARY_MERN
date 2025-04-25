@@ -17,7 +17,7 @@ const Dashboard = () => {
     fetchData();
     const fetchData1 = async () => {
       try {
-        const res = await axios.get("/totalIssueBook");
+        const res = await axios.get("/totalbook");
         setTotalBook(res.data.message);
       } catch (error) {
         console.log(error);
@@ -26,7 +26,7 @@ const Dashboard = () => {
     fetchData1();
     const fetchData2 = async () => {
       try {
-        const res = await axios.get("/totalbook");
+        const res = await axios.get("/totalIssueBook");
         setIssueBook(res.data.message);
       } catch (error) {
         console.log(error);
